@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+
+    <style>
+        *{
+            margin: 0;
+        }
+        .container{
+            height: 900px;
+            width: 100vw;
+            display: grid;
+            border: 2px solid black;
+            grid-template-areas: " nav nav"
+                                "vnav content "
+                                "footer footer";
+            grid-template-rows: 1fr 8fr 1fr;
+            grid-template-columns: 2fr 8fr;
+            
+          
+
+        }
+        .nav{
+            background-color: rgb(70, 111, 70);
+            grid-area: nav;
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "nav1 nav2 nav3 nav4 nav5";
+            color: white;
+
+        }
+        .nav1{
+            background-color:#A1E3F9;
+            grid-area: nav1;
+            border: 2px solid black;
+            text-align: center;
+            padding-top: 20px;
+            font-weight: 800;
+            font-size:25px;
+            
+        }
+        .nav2{
+            background-color: #A1E3F9;
+            grid-area: nav2;
+            border: 2px solid black;
+            text-align: center;
+            padding-top: 20px;
+            font-weight: 800;
+            font-size:25px;
+        }
+        .nav3{
+            background-color: #A1E3F9;
+            grid-area: nav3;
+            border: 2px solid black;
+            text-align: center;
+            padding-top: 20px;
+            font-weight: 800;
+            font-size:25px;
+        }
+        .nav4{
+            background-color: #A1E3F9;
+            grid-area: nav4;
+            border: 2px solid black;
+            text-align: center;
+            padding-top: 20px;
+            font-weight: 800;
+            font-size: 25px;
+        }
+        .nav5{
+            background-color: #A1E3F9;
+            grid-area: nav5;
+            border: 2px solid black;
+            text-align: center;
+            padding-top: 20px;
+            font-weight: 800;
+            font-size:25px;
+        }
+        .vnav{
+            background-color:#A1E3F9;
+            grid-area: vnav;
+            border: 2px solid black;
+        }
+        .content{
+            background-color: whitesmoke;
+            grid-area: content;
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        .footer{
+            background-color: rgb(39, 39, 80);
+            grid-area: footer;
+            border: 2px solid black;
+        }
+        .dropdowncontent{
+            display: none;
+            
+
+        }
+        .nav1:hover>.dropdowncontent{
+            display: block;
+            position: absolute;
+            background-color: #2a427e;
+            width: 200px;
+        }
+        .nav2:hover>.dropdowncontent{
+            display: block;
+            position: absolute;
+            background-color: #2a427e;
+            width: 250px;
+        }
+        button{
+            height: 100px;
+            width: 100%;
+            background-color: rgb(73, 101, 176);
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            background-color:rgb(73, 101, 176) ;
+            color: white;
+            font-family:sans-serif;
+            font-weight: 800;
+        }
+        button{
+            box-shadow: 10px 5px 5px black;
+        }
+        img{
+            height: 200px;
+            width:100%;
+            border-radius: 10px;
+            
+        }
+        .card{
+            border: 2px solid black;
+            height: 300px;
+            border-radius: 10px;
+            margin: 30px;
+            background-color: #e0eff9;
+            color: blue;
+            display: flex;
+            flex-direction: column;
+           align-items: center;
+            box-shadow: 4px 4px 10px black;
+            transition: box-shadow 2s ease-in-out 0s;
+        
+        }
+        .card>p{
+            text-align: center;
+        }
+        .card>h5{
+            text-align: center;
+        }
+        #a{
+            height: 40px;
+            width: 90px;
+            background-color: white;
+            border-radius: 20px;
+            color: black;
+            
+            background-color: blue;
+            color: white;
+            
+        }
+        #buy{
+            background-color: blue;
+        }
+        .card:hover{
+             box-shadow: 10px 10px 18px black;
+        }
+        #im{
+            height: 50px;
+            width: 50px;
+        }
+        #foot{
+            display: inline-block;
+        }
+        .footer{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .footer #foot img:hover{
+            transform:scale(1.1);
+        }
+        .content .card:hover{
+            transform: scale(1.1);
+        }
+        .vnav button:hover{
+            box-shadow: 4px 4px 8px white;
+            display: block;
+        }
+        .search{
+        background-color: rgb(39,39,80);
+        height: 100px;
+        width:100vw;
+        border: 2px solid black;
+       }
+        #search1{
+            position: absolute;
+            left: 45%;
+            top: 30px;
+            height: 35px;
+            width: 400px;
+            
+        }
+        span{
+            position: absolute;
+            left: 1200px;
+            top: 40px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="search"><input type="text" placeholder="search here" id="search1"><span class="material-symbols-outlined">search
+        </span>
+        
+</div>
+
+    <div class="container">
+
+        <div class="content">
+            <div class="card">
+                <img src="moist.webp" alt="Moisturizer">
+                <p>Cetaphil Moisturising Cream</p>
+                <h5>Rs 1500</h5>
+                <button id="a"><a href="https://ik.imagekit.io/anscommerce/image/tr:e-sharpen-01,h-1080,w-1080,cm-pad_resize/data/galderma/09aug2024/F47020_7.jpg" id="buy">Buy Now</a></button>
+            </div>
+            
+
+                <div class="card">
+                    <img src="sunscreen.webp" alt="Sunscreen">
+                    <p>Cetaphil Sunscreen</p>
+                    <h5>Rs 1076</h5>
+                    <button id="a"><a href="https://ik.imagekit.io/anscommerce/image/tr:e-sharpen-01,h-1080,w-1080,cm-pad_resize/data/galderma/17may2024/F42003_1.jpg" id="buy">Buy Now</a></button>
+                </div>
+                <div class="card">
+                    <img src="oil.webp" alt="Baby oil">
+                    <p>Cetaphil Baby Oil</p>
+                    <h5>Rs 746</h5>
+                    <button id="a"><a href="https://www.cetaphil.in/dw/image/v2/BGGN_PRD/on/demandware.static/-/Sites-galderma-in-m-catalog/default/dwb19a9064/9318637043323/9318637043323-CB%20Massage%20Oil%20200ml_Blue%20background.png?sw=450&sh=450&sm=fit&q=85" id="buy">Buy Now</a></button>
+                    </div>
+                <div class="card">
+                    <img src="toner.jpg" alt="Toner">
+                    <p>Cetaphil Toner</p>
+                    <h5>Rs 831</h5>
+                    <button id="a"><a href="https://ik.imagekit.io/anscommerce/image/tr:e-sharpen-01,h-1080,w-1080,cm-pad_resize/data/galderma/08may2024/F43004_1.jpg" id="buy">Buy Now</a></button>
+                </div>
+                
+                    <div class="card">
+                        <img src="Cleanser.jpg" alt="Cleanser">
+                        <p>Cetaphil Cleanser</p>
+                        <h5>Rs 945</h5>
+                        <button id="a"><a href="https://ik.imagekit.io/anscommerce/image/tr:e-sharpen-01,h-1080,w-1080,cm-pad_resize/data/galderma/08may2024/F49012_1.jpg" id="buy">Buy Now</a></button>
+                    </div>
+                    <div class="card">
+                        <img src="cl.jpg" alt="cleanser">
+                    </div>
+                    <div class="card">
+                        <img src="kid.webp" alt="cream">
+                    </div>
+                    <div class="card">
+                        <img src="baby1.webp" alt="baby">
+                    </div>
+                    <div class="card">
+                        <img src="to.webp" alt="cream">
+                    </div>
+                    <div class="card">
+                        <img src="clean.webp" alt="clean">
+                    </div>         
+        </div>
+        <div class="footer">
+            <div id="foot"><img src="instagram.webp" alt="instagram" id="im"></div>
+            <div id="foot"><img src="LinkedIn.png" alt="linkedn" id="im"></div>
+            <div id="foot"><img src="Facebook.webp" alt="Facebook" id="im"></div>
+        </div>
+        
+        <div class="nav">
+            <div class="nav1">Products
+                <div class="dropdowncontent">
+                    <h4>skin type</h4>
+                    <ul>
+                        <li>Dry Skin</li>
+                        <li>Oily skin</li>
+                        <li>Combination skin</li>
+                        <li>Normal skin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav2">Brands
+                <div class="dropdowncontent">
+                    <h4>Cetaphil</h4>
+                    <ul>
+                        <li>Cetaphilcore</li>
+                        <li>Cetaphil baby</li>
+                        <li>Cetaphil optimal hydration</li>
+                        <li>Cetaphil Bright Healthy Radiation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav3">New and featured</div>
+            <div class="nav4"> skinscare tips </div>
+            <div class="nav5">contact</div>
+        </div>
+        <div class="vnav">
+            <button><a href="https://cdn.anscommerce.com/image/catalog/brandstore/galderma/creatives/Moisturiser.jpg">Moisturizer</a></button><br><br><br>
+            <button><a href="https://cdn.anscommerce.com/image/catalog/brandstore/galderma/creatives/Sunscreen.jpg">Sunscreen</a></button><br><br><br>
+            <button><a href="https://cdn.anscommerce.com/image/catalog/brandstore/galderma/creatives/Toner.jpg">toner</a></button><br><br><br>
+            <button><a href="https://cdn.anscommerce.com/image/catalog/brandstore/galderma/creatives/Daily_Lotion.jpg">baby skinscare</a></button><br><br><br>
+            <button><a href="https://cdn.anscommerce.com/image/catalog/brandstore/galderma/creatives/Serum.jpg">Serum</a></button><br><br><br>
+        </div>
+        
+        </div>
+        
+    </div>
+</body>
+</html>
